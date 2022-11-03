@@ -30,6 +30,10 @@
               "unnamedComponents": "arrow-function"
             }
           ],
-        "arrow-body-style":"off"
+        "arrow-body-style":"off",
+        "react/jsx-one-expression-per-line": 0,
+        "object-curly-newline": "off",
+        "react/prop-types": "off",
+        "arrow-parens": "off"
     }
 }
