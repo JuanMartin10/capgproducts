@@ -1,8 +1,11 @@
 import AppRouter from './routes';
+import DataProvider from './context/data-context';
 import './App.css';
 
-const App = () => {
-  return <AppRouter />;
-};
+const App = () => (
+  <DataProvider>
+    <AppRouter />;
+  </DataProvider>
+);
 
 export default App;
