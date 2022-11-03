@@ -42,9 +42,7 @@ export const addProductToCart = async product => {
       body: JSON.stringify(product),
     });
 
-    if (res.ok) {
-      return await res.json();
-    }
+    return await res.json();
   } catch (error) {
     throw new Error(error);
   }
