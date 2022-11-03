@@ -1,0 +1,55 @@
+.item {
+  border-radius: 1em;
+  box-shadow: 0.12em 0.25em 0.5em 0.25em rgba(0, 0, 0, 0.1);
+  display: flex;
+  padding: 16px;
+  gap: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.imageContainer {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.info {
+  text-decoration: none;
+  padding: 12px;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  flex: 1;
+}
+
+.info .titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.info .titles .brand {
+  font-size: 24px;
+}
+
+.info .titles .model {
+  font-size: 18px;
+}
+
+.info .priceContainer {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.info .priceContainer .price {
+  font-size: 32px;
+}
+
+.infoContainer .actions {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+}
