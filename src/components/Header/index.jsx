@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { DataContext } from '../../context/data-context';
 
 import './index.css';
 
 const Header = () => {
+  const { shoppingBag } = useContext(DataContext);
+
   return (
     <header className="header">
       <div className="logo">
@@ -18,6 +21,7 @@ const Header = () => {
           width="20px"
           alt="shopping-bag-icon"
         />
+        <span>{shoppingBag}</span>
       </div>
     </header>
   );

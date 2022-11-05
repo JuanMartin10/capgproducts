@@ -19,6 +19,7 @@ const DataProvider = props => {
 
   const fetchData = async () => {
     dataPending.current = true;
+    if (data) return;
 
     const res = await getAllProducts();
     setData(res);
@@ -56,13 +57,13 @@ const DataProvider = props => {
     dataPending.current = false;
   };
 
-  const fetchAddProduct = () => {
+  const fetchAddProduct = async () => {
     dataPending.current = true;
     if (!selectedProduct) return;
 
-    const res = addProductToCart(selectedProduct);
+    const res = await addProductToCart(selectedProduct);
 
-    setShoppingBag(res.count);
+    setShoppingBag(state => state + res.count);
 
     dataPending.current = false;
   };
